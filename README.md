@@ -15,11 +15,9 @@ npm install protractor-cucumber --save-dev
 
 Below demonstrates how to use protractor-cucumber
 
-```seleniumAddress``` is the address of a running selenium standalone server
+`seleniumAddress` is the address of a running selenium standalone server
 
-protractor-cucumber returns a ```world``` object; which you can configure; with options described below.
-
-
+protractor-cucumber returns a `world` object; which you can configure; with options described below.
 
 ```
 var pc = require('protractor-cucumber');
@@ -48,7 +46,7 @@ the protractor lib
 ### by
 a collection of element locator strategies. 
 ### assert
-our chosen assertion library, not required is using ```should```
+our chosen assertion library, not required is using `should`
 ### baseUrl
 allows you to set a baseurl to use in your tests
 ### properties
@@ -60,7 +58,7 @@ quits the browser used in your tests
 ## Options
 
 ### browser
-Specifies a browser; ```chrome```, ```phantomjs```, defaults to ```chrome```
+Specifies a browser; `chrome`, `phantomjs`, defaults to `chrome`
 ### timeout
 Specifies a timeout for setScriptTimeout, defaults to 100000
 ### assert

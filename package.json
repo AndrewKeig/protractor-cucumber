@@ -36,6 +36,7 @@
     "angularjs",
     "testing",
     "behaviour driven development",
-    "bdd"
+    "bdd",
+    "selenium"
   ]
 }
