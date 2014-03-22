@@ -1,0 +1,41 @@
+{
+  "name": "protractor-cucumber",
+  "description": "Cucumber support for protractor",
+  "version": "0.1.0",
+  "homepage": "https://github.com/andrewkeig/protractor-cucumber",
+  "author": {
+    "name": "Andrew Keig",
+    "email": "andrew.keig@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrewkeig/protractor-cucumber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrewkeig/protractor-cucumber/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/andrewkeig/protractor-cucumber/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "async": ">=0.2.10",
+    "protractor": ">=0.20.1",
+    "selenium-webdriver": ">=2.40.0"
+  },
+  "keywords": [
+    "protractor",
+    "cucumber",
+    "angular",
+    "angularjs",
+    "testing",
+    "behaviour driven development",
+    "bdd"
+  ]
+}
