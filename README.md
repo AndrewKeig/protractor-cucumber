@@ -127,31 +127,31 @@ Add some support, `features/step_definitions/support.js`
 var Support = function(){
 };
 
-PageObject.prototype.get = function(sut, url, callback){
+Support.prototype.get = function(sut, url, callback){
   sut.browser.get(url).then(function(result) {
     callback(result)
   });
 };
 
-PageObject.prototype.findByBinding = function(sut, item, callback){
+Support.prototype.findByBinding = function(sut, item, callback){
   sut.browser.findElement(sut.by.binding(item)).then(function(result) {
     callback(result);
   });
 };
 
-PageObject.prototype.isElementPresent = function(sut, find, callback){
+Support.prototype.isElementPresent = function(sut, find, callback){
   sut.browser.isElementPresent(sut.by.linkText(find)).then(function(result) {
      callback(result)
   });
 };
 
-PageObject.prototype.isElementPresentByClass = function(sut, find, callback){
+Support.prototype.isElementPresentByClass = function(sut, find, callback){
   sut.browser.isElementPresent(sut.by.css('.'+find)).then(function(result) {
      callback(result)
   });
 };
 
-module.exports = new PageObject();
+module.exports = new Support();
 
 ```
 
