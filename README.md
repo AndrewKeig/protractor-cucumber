@@ -13,11 +13,38 @@ npm install protractor-cucumber --save-dev
 
 ## Usage
 
-Below demonstrates how to use protractor-cucumber
+
+#### Install selenium
+
+``` https://code.google.com/p/selenium/downloads/list ```
+
+#### Update webdriver
+
+``` webdriver-manager update ```
+
+#### Install Cucumber
+
+``` npm install -g cucumber ```
+
+#### Install protractor
+
+``` npm install -g protractor ```
+
+#### Start Selenium
+
+``` webdriver-manager start ```
+
+#### Create a feature file
+
+
+Below demonstrates how to use `protractor-cucumber`
 
 `seleniumAddress` is the address of a running selenium standalone server
 
-protractor-cucumber returns a `world` object; which you can configure; with options described below.
+`protractor-cucumber` returns a `world` object; which you can configure; with options described below.
+
+
+Lets create a steps file in `features/step_definitions/steps.js`
 
 ```
 var pc = require('protractor-cucumber');
@@ -34,6 +61,71 @@ var steps = function() {
 
 module.exports = steps;
 ```
+
+Now create a feature file, `features/homepage.feature`
+
+```
+
+Feature: Homepage 
+  As a user
+  I want to visit the homepage
+  So that I can access the various features on offer
+
+  Scenario: Visit Homepage
+    Given I am on the homepage
+    Then I should see a "navbar"
+    And I should see a "login" link
+    And I should see a "register" link
+
+```
+
+Now create some steps for the above feature, `features/step_definitions/homepage/steps.js`
+
+```
+
+var steps = function() {
+
+  this.Given(/^I am on the homepage$/, function(callback) {
+    support.get(this, 'http://localhost:5000', function(result){
+      setTimeout(callback, 1000);
+    });
+  });
+
+  this.Then(/^I should see a "([^"]*)" link$/, function(link, callback) {
+    support.findByBinding(this, link, function(result){
+      result.getText().then (function(text){
+        text.trim().toLowerCase().should.equal(link.trim().toLowerCase());             
+        setTimeout(callback, 1000);
+      });     
+    });
+  });
+
+  this.Then(/^I should not see a "([^"]*)" link$/, function(link, callback) {
+    support.isElementPresent(this, link, function(result){
+      result.should.equal(false);
+      setTimeout(callback, 1000);
+    });
+  });
+
+  this.Then(/^I should see a "([^"]*)"$/, function(link, callback) {
+    support.isElementPresentByClass(this, link, function(result){
+      result.should.equal(true);
+      setTimeout(callback, 1000);
+    });
+  });
+
+};
+
+module.exports = steps;
+
+```
+
+Now run cucumber: 
+
+```
+cucumber.js
+```
+
 
 ## World
 
