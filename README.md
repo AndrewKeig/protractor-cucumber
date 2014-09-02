@@ -46,13 +46,13 @@ Below demonstrates how to use `protractor-cucumber`
 
 Lets create a steps file in `features/step_definitions/steps.js`
 
-```
+```javascript
 var pc = require('protractor-cucumber');
 
 var steps = function() {
   var seleniumAddress = 'http://localhost:4444/wd/hub';
   var options = { browser : 'chrome', timeout : 100000 };
-  this.world = pc.world(seleniumAddress, options);
+  this.World = pc.world(seleniumAddress, options);
 
   this.After(function(callback) {
     this.quit(callback);
@@ -81,7 +81,7 @@ Feature: Homepage
 
 Now create some steps for the above feature, `features/step_definitions/homepage/steps.js`
 
-```
+```javascript
 
 var steps = function() {
 
@@ -122,7 +122,7 @@ module.exports = steps;
 
 Add some support, `features/step_definitions/support.js`
 
-```
+```javascript
 
 var Support = function(){
 };
