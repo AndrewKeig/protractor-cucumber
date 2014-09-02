@@ -16,7 +16,7 @@ npm install protractor-cucumber --save-dev
 
 #### Install selenium
 
-``` https://code.google.com/p/selenium/downloads/list ```
+``` http://selenium-release.storage.googleapis.com/index.html ```
 
 #### Update webdriver
 
