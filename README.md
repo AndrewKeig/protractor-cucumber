@@ -13,15 +13,6 @@ npm install protractor-cucumber --save-dev
 
 ## Usage
 
-
-#### Install selenium
-
-``` https://code.google.com/p/selenium/downloads/list ```
-
-#### Update webdriver
-
-``` webdriver-manager update ```
-
 #### Install Cucumber
 
 ``` npm install -g cucumber ```
@@ -29,6 +20,11 @@ npm install protractor-cucumber --save-dev
 #### Install protractor
 
 ``` npm install -g protractor ```
+
+#### Update webdriver
+
+``` webdriver-manager update ```
+
 
 #### Start Selenium
 
@@ -82,6 +78,8 @@ Feature: Homepage
 Now create some steps for the above feature, `features/step_definitions/homepage/steps.js`
 
 ```javascript
+
+var support = require('../support');
 
 var steps = function() {
 
