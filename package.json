@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "async": ">=0.2.10",
-    "protractor": ">=0.20.1",
-    "selenium-webdriver": ">=2.40.0"
+    "protractor": ">=1.6.0",
+    "selenium-webdriver": ">=2.44.0"
   },
   "keywords": [
     "protractor",
