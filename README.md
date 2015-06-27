@@ -194,3 +194,5 @@ Specifies an assert module; to use within your tests
 Specifies a baseurl to be used within your tests
 ### properties
 Specifies a properties object; stick whatever you like in there
+### desiredCapabilities
+Desired Capabilities passed to Selenium; Arbitrary object whose keys are capability names.  Is merged with capabilites created for `browser` or can be used instead of `browser`.
