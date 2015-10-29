@@ -1,7 +1,7 @@
 {
   "name": "protractor-cucumber",
   "description": "Cucumber support for protractor",
-  "version": "0.1.3",
+  "version": "0.1.6",
   "homepage": "https://github.com/andrewkeig/protractor-cucumber",
   "author": {
     "name": "Andrew Keig",
