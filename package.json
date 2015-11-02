@@ -27,6 +27,7 @@
   "dependencies": {
     "async": ">=0.2.10",
     "protractor": ">=1.6.0",
+    "cucumber": ">=0.8.0",
     "selenium-webdriver": ">=2.44.0"
   },
   "keywords": [
