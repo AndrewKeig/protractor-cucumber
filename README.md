@@ -51,7 +51,7 @@ var steps = function() {
   var options = { browser : 'chrome', timeout : 100000 };
   this.World = pc.world(seleniumAddress, options);
 
-  this.After(function(callback) {
+  this.After(function(scenario, callback) {
     this.quit(callback);
   });
 };
